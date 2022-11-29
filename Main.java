@@ -8,9 +8,11 @@ Period 2
 class Main {
   
   public static void main(String[] args) {
-    
-    String a[] = {"31","64","49"};
-    GussingGame.main(a);
+
+    GuessingGame game = new GuessingGame("game");
+
+    game.gameLoop();
+  
 
     // Can you make a Guessing Game Type that could be used to get 
     // each value from the overall results via accessor methods?
