@@ -6,9 +6,9 @@ class GuessingGame {
 
 
   // constructor
-  GuessingGame(String name) {
-    
-    this.name = name;
+  public GuessingGame() {
+
+    System.out.println("Game created");
     
   }
 
