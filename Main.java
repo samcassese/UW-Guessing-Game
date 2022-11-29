@@ -17,13 +17,13 @@ class Main {
   public static void main(String[] args) {
 
     // add random
-    Random rand = new Random();
+    Random random = new Random();
 
     // max value for random number
     final int MAX = 100;
     
     // generates random value from 0-100;
-    int random = rand.nextInt(MAX); 
+    int rand = random.nextInt(MAX); 
 
     // add scanner
     Scanner scanner = new Scanner(System.in);
@@ -44,12 +44,12 @@ class Main {
 
       int guess = scanner.nextInt();
 
-      if (guess < random) {
+      if (guess < rand) {
         guessCount++;
         System.out.println("It's higher");
       }
 
-      else if (guess > random) {
+      else if (guess > rand) {
         guessCount++;
         System.out.println("It's lower");
       }
@@ -82,6 +82,7 @@ class Main {
     // System.out.println("Guess / game: " + myGame.getAvg());
 
     scanner.close();
+    
   }
   
 }
