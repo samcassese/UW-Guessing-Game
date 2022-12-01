@@ -9,7 +9,7 @@ class GuessingGame {
   public GuessingGame() {
 
     System.out.println("Game created");
-    
+
   }
 
 

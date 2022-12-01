@@ -3,8 +3,8 @@ import java.util.*;
 /*
 Sam Cassese
 11/28/22
-AP CS-A
 Period 2
+Guessing Game
 */
 
 /*
@@ -65,7 +65,6 @@ class Main {
     }
 
     
-
 
 
 
