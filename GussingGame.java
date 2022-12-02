@@ -6,8 +6,9 @@ Guessing Game
 */
 
 /*
-Notes
-11:32 / 15:00
+Notes:
+time to add if/else logic
+do result constants in GG.java file
 */
 
 // REMEMBER COMMENTS!!!!
@@ -65,6 +66,7 @@ class GussingGame {
 
     // a goal answer
     int goal = getGoal(10, 1); 
+    System.out.println(goal);
 
     int userAnswer = askUser();
     
@@ -95,7 +97,7 @@ class GussingGame {
   // YOU WILL NEED TO USE THIS METHOD TO PICK TEST-PASSING RANDOM NUMBERS!!
   //
   // int random = random number we are guessing
-  // int i = count (amount of rounds we are gonna play)
+  // int i = index of array of test passing solutions i guess idk whats happening
   private static int getGoal(int random, int i){
     int goal = random;
     if(i < goals.length) goal = Integer.parseInt(goals[i]);

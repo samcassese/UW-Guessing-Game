@@ -1,3 +1,4 @@
+// this class is for overall results at the end i think
 public class GG {
   
   // Creat properties for each value in the overal results
