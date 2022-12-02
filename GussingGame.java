@@ -23,12 +23,25 @@ class GussingGame {
   // NEEDED FOR TEST TO PASS
   private static String[] goals;
 
-  // static strings for intro
-  // go here
-  //
+  // variables
+  int guessCount = 0;
+
+  // static strings
+  // 
+  // intro
+  final String THINKING = "I'm thinking of a number between 1 and 100...";
+  
+  final String YOUR_GUESS  = "Your guess? ";
+  final String HIGHER = "It's higher.";
+  final String LOWER  = "It's lower.";
+
+  final String GUESS_AMOUNT = "You got it right in " + guessCount + " guesses!";
+
+  final String PLAY_AGAIN = "Do you want to play again? ";
 
   // what do i need
   static Scanner scanner = new Scanner(System.in); // get user input
+  
 
   public static void main(String[] args){
     goals = args;  // NEEDED FOR TESTS TO PASS
