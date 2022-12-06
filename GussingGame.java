@@ -9,6 +9,7 @@ Guessing Game
 Notes:
 time to add if/else logic
 do result constants in GG.java file
+combine askUserPlayAgain and askUser later on
 */
 
 // REMEMBER COMMENTS!!!!
@@ -53,7 +54,8 @@ class GussingGame {
     
     playRound(scanner, random); 
 
-    
+
+    // results();
 
     scanner.close();
   }
@@ -68,6 +70,7 @@ class GussingGame {
 
     int userAnswer = 0; // initializing variable
 
+    
     while(userAnswer != goal) {
 
       userAnswer = askUser();
@@ -91,6 +94,9 @@ class GussingGame {
     final String GUESS_AMOUNT = "You got it right in " + guessCount + " guesses!";
 
     System.out.println(GUESS_AMOUNT);
+
+    askUserPlayAgain();
+    
     
     
   }
@@ -100,14 +106,50 @@ class GussingGame {
     System.out.print(YOUR_GUESS);
     
     int userAnswer = scanner.nextInt();
+    scanner.nextLine(); 
 
     return userAnswer;
+  }
+
+  // asks user if they want to play again
+  public static String askUserPlayAgain() {
+
+    System.out.print(PLAY_AGAIN);
+    String playAgain = scanner.nextLine();
+
+    // if playAgain startsWith y
+    // continue to do playRound
+
+    // else
+    // end playRound
+    if(playAgain.startsWith("y") ) {
+      System.out.print("Answer starts with y");
+    }
+
+
+    return playAgain;
+      
+  }
+
+  public static void playGame() {
+    playRound(scanner, random);
   }
 
   // prints introduction to program
   public static void intro() {
     System.out.println();
     System.out.println(THINKING); 
+  }
+
+  // prints final results/stats from game
+  public static void results() {
+
+    System.out.println("\n" + "Overall results:");
+    System.out.printf("Total games = 3 \n");
+    System.out.printf("Total guesses = 17 \n");
+    System.out.printf("Guesses/game = 5.7 \n");
+    System.out.printf("Best game = 4");
+    
   }
   
   // YOU WILL NEED TO USE THIS METHOD TO PICK TEST-PASSING RANDOM NUMBERS!!
