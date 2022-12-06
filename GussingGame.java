@@ -8,11 +8,12 @@ Guessing Game
 
 /*
 Notes:
-time to add if/else logic
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
 need to reset guess count each time a new round is played
 guessesPerGame in results is buggy still
+need to allow for uppercase Y to work for y/n as well
+need to finish calculating/printing results
 */
 
 // REMEMBER COMMENTS!!!!
