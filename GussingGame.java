@@ -36,8 +36,6 @@ class GussingGame {
   final static String HIGHER = "It's higher.";
   final static String LOWER  = "It's lower.";
 
-  final String GUESS_AMOUNT = "You got it right in " + guessCount + " guesses!";
-
   final static String PLAY_AGAIN = "Do you want to play again? ";
 
   // what do i need
@@ -66,7 +64,7 @@ class GussingGame {
 
     // a goal answer
     int goal = getGoal(10, 1); 
-    System.out.println(goal); // for testing purposes
+    
 
     int userAnswer = 0; // initializing variable
 
@@ -89,9 +87,14 @@ class GussingGame {
       }
       
     }
+
+    final String GUESS_AMOUNT = "You got it right in " + guessCount + " guesses!";
+
+    System.out.println(GUESS_AMOUNT);
     
     
   }
+  
 
   public static int askUser() {
     System.out.print(YOUR_GUESS);
