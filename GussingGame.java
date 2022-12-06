@@ -25,7 +25,7 @@ class GussingGame {
   private static String[] goals;
 
   // variables
-  int guessCount = 0;
+  static int guessCount = 0;
 
   // static strings
   // 
@@ -66,17 +66,30 @@ class GussingGame {
 
     // a goal answer
     int goal = getGoal(10, 1); 
-    System.out.println(goal);
+    System.out.println(goal); // for testing purposes
 
-    int userAnswer = askUser();
-    
-    
-    /*
-    while(x != y) {
-      // do things
-    
+    int userAnswer = 0; // initializing variable
+
+    while(userAnswer != goal) {
+
+      userAnswer = askUser();
+
+      if(userAnswer < goal) {
+        System.out.println(HIGHER);
+        guessCount++;
+      }
+
+      else if(userAnswer > goal) {
+        System.out.println(LOWER);
+        guessCount++;
+      }
+
+      else {
+        guessCount++;
+      }
+      
     }
-    */
+    
     
   }
 
