@@ -11,12 +11,10 @@ Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
 need to reset guess count each time a new round is played
-guessesPerGame in results is buggy still
 need to allow for uppercase Y to work for y/n as well
 need to finish calculating/printing results
+also should probably look into why the tests are being weird
 */
-
-// REMEMBER COMMENTS!!!!
 
 /*
 Multi-method class that plays a guessing game
@@ -38,7 +36,7 @@ class GussingGame {
   // 
   // intro
   final static String THINKING = "I'm thinking of a number between 1 and 100...";
-  
+  //
   final static String YOUR_GUESS  = "Your guess? ";
   final static String HIGHER = "It's higher.";
   final static String LOWER  = "It's lower.";
@@ -120,7 +118,7 @@ class GussingGame {
     System.out.print(PLAY_AGAIN);
     String playAgain = scanner.nextLine();
 
-    if(playAgain.startsWith("y") == false ) {
+    if(playAgain.startsWith("y") == false) {
       playing = false;
     }
 
@@ -148,12 +146,12 @@ class GussingGame {
   // prints final results/stats from game
   public static void results() {
 
-    double guessesPerGame = (guessCount / roundsPlayed);
+    double guessesPerGame = guessCount / roundsPlayed;
 
     System.out.println("\n" + "Overall results:");
     System.out.printf("Total games = %d \n", roundsPlayed);
     System.out.printf("Total guesses = %d \n", guessCount);
-    System.out.printf("Guesses/game = %d \n", guessesPerGame);
+    System.out.printf("Guesses/game = %f \n", guessesPerGame);
     System.out.printf("Best game = 4");
     
   }
