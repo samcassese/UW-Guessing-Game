@@ -6,6 +6,12 @@ Guessing Game
 */
 
 /*
+For git
+- made random static and moved outside of main method
+- made playGame method to play multiple rounds
+*/
+
+/*
 Notes:
 time to add if/else logic
 do result constants in GG.java file
@@ -27,6 +33,7 @@ class GussingGame {
 
   // variables
   static int guessCount = 0;
+  static Boolean playing = true;
 
   // static strings
   // 
@@ -41,21 +48,16 @@ class GussingGame {
 
   // what do i need
   static Scanner scanner = new Scanner(System.in); // get user input
-  
+  static Random  random  = new Random(); // get random number
 
   public static void main(String[] args){
     goals = args;  // NEEDED FOR TESTS TO PASS
 
-
-    intro();
-
-    // what do i need
-    Random  random  = new Random(); // get random number
     
-    playRound(scanner, random); 
+    playGame();
 
 
-    // results();
+    results();
 
     scanner.close();
   }
@@ -63,6 +65,8 @@ class GussingGame {
   // takes user input and generates random number to be guessed
   // plays single round of guessing game
   public static void playRound(Scanner scanner, Random random) {
+
+    intro();
 
     // a goal answer
     int goal = getGoal(10, 1); 
@@ -117,13 +121,8 @@ class GussingGame {
     System.out.print(PLAY_AGAIN);
     String playAgain = scanner.nextLine();
 
-    // if playAgain startsWith y
-    // continue to do playRound
-
-    // else
-    // end playRound
-    if(playAgain.startsWith("y") ) {
-      System.out.print("Answer starts with y");
+    if(playAgain.startsWith("y") == false ) {
+      playing = false;
     }
 
 
@@ -132,7 +131,12 @@ class GussingGame {
   }
 
   public static void playGame() {
-    playRound(scanner, random);
+    playing = true;
+    
+    while(playing == true) {
+      playRound(scanner, random);
+    }
+    
   }
 
   // prints introduction to program
