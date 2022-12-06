@@ -5,17 +5,14 @@ Period 2
 Guessing Game
 */
 
-/*
-For git
-- made random static and moved outside of main method
-- made playGame method to play multiple rounds
-*/
 
 /*
 Notes:
 time to add if/else logic
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
+need to reset guess count each time a new round is played
+guessesPerGame in results is buggy still
 */
 
 // REMEMBER COMMENTS!!!!
@@ -34,6 +31,7 @@ class GussingGame {
   // variables
   static int guessCount = 0;
   static Boolean playing = true;
+  static int roundsPlayed = 0;
 
   // static strings
   // 
@@ -135,6 +133,7 @@ class GussingGame {
     
     while(playing == true) {
       playRound(scanner, random);
+      roundsPlayed++;
     }
     
   }
@@ -148,10 +147,12 @@ class GussingGame {
   // prints final results/stats from game
   public static void results() {
 
+    double guessesPerGame = (guessCount / roundsPlayed);
+
     System.out.println("\n" + "Overall results:");
-    System.out.printf("Total games = 3 \n");
-    System.out.printf("Total guesses = 17 \n");
-    System.out.printf("Guesses/game = 5.7 \n");
+    System.out.printf("Total games = %d \n", roundsPlayed);
+    System.out.printf("Total guesses = %d \n", guessCount);
+    System.out.printf("Guesses/game = %d \n", guessesPerGame);
     System.out.printf("Best game = 4");
     
   }
