@@ -11,7 +11,6 @@ Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
 need to finish calculating/printing results
-guessCountBest in line 35 needs different solution, not just making huge number
 guessesPerGame isnt calculated/rounded correctly
 also should probably look into why the tests are being weird
 */
@@ -22,6 +21,7 @@ Multi-method class that plays a guessing game
 
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.Integer;
 
 class GussingGame {
   // NEEDED FOR TEST TO PASS
@@ -33,7 +33,7 @@ class GussingGame {
   static int roundsPlayed = 0;
   // variables for best round
   static int guessCountRound = 0;
-  static int guessCountBest = 999999999;
+  static int guessCountBest = Integer.MAX_VALUE;
 
   // static strings
   // 
