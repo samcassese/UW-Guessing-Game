@@ -10,8 +10,6 @@ Guessing Game
 Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
-need to finish calculating/printing results
-guessesPerGame isnt calculated/rounded correctly
 also should probably look into why the tests are being weird
 */
 
@@ -159,7 +157,7 @@ class GussingGame {
   // prints final results/stats from game
   public static void results() {
 
-    double guessesPerGame = guessCount / roundsPlayed;
+    double guessesPerGame = ((double)guessCount / (double)roundsPlayed);
     
 
     System.out.println("\n" + "Overall results:");
