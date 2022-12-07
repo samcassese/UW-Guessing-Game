@@ -32,7 +32,7 @@ class GussingGame {
   static int roundsPlayed = 0;
   // variables for best round
   static int guessCountRound = 0;
-  static int guessCountBest;
+  static int guessCountBest = 0;
 
   // static strings
   // 
@@ -66,6 +66,8 @@ class GussingGame {
   // plays single round of guessing game
   public static void playRound(Scanner scanner, Random random) {
 
+    guessCountRound = 0;
+
     intro();
 
     // a goal answer
@@ -82,15 +84,18 @@ class GussingGame {
       if(userAnswer < goal) {
         System.out.println(HIGHER);
         guessCount++;
+        guessCountRound++;
       }
 
       else if(userAnswer > goal) {
         System.out.println(LOWER);
         guessCount++;
+        guessCountRound++;
       }
 
       else {
         guessCount++;
+        guessCountRound++;
       }
       
     }
@@ -101,7 +106,11 @@ class GussingGame {
 
     askUserPlayAgain();
     
-    
+    if(guessCountRound < guessCountBest) {
+      guessCountBest = guessCountRound;
+    }
+
+    guessCountRound = 0;
     
   }
   
@@ -156,7 +165,7 @@ class GussingGame {
     System.out.printf("Total games = %d \n", roundsPlayed);
     System.out.printf("Total guesses = %d \n", guessCount);
     System.out.printf("Guesses/game = %f \n", guessesPerGame);
-    System.out.printf("Best game = 4");
+    System.out.printf("Best game = %d", guessCountBest);
     
   }
   

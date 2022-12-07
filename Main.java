@@ -12,8 +12,9 @@ class Main {
   public static void main(String[] args) throws FileNotFoundException {
     
     String a[] = {"31","64","49"};
-    //GussingGame.main(a);
+    GussingGame.main(a);
 
+    /*
     GG myGuessingGame = new GG("Sam");
     GG gg = new GG("Sue");
     System.out.println(myGuessingGame.getPlayer());
@@ -21,6 +22,7 @@ class Main {
 
     gg.playGame();
     gg.showResults();
+    */
 
     // Can you make a Guessing Game Type that could be used to get 
     // each value from the overall results via accessor methods?
