@@ -11,7 +11,6 @@ Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
 need to reset guess count each time a new round is played
-need to allow for uppercase Y to work for y/n as well
 need to finish calculating/printing results
 also should probably look into why the tests are being weird
 */
@@ -31,6 +30,9 @@ class GussingGame {
   static int guessCount = 0;
   static Boolean playing = true;
   static int roundsPlayed = 0;
+  // variables for best round
+  static int guessCountRound = 0;
+  static int guessCountBest;
 
   // static strings
   // 
@@ -57,6 +59,7 @@ class GussingGame {
     results();
 
     scanner.close();
+    
   }
 
   // takes user input and generates random number to be guessed
@@ -118,7 +121,7 @@ class GussingGame {
     System.out.print(PLAY_AGAIN);
     String playAgain = scanner.nextLine();
 
-    if(playAgain.startsWith("y") == false) {
+    if(playAgain.startsWith("y") == false && playAgain.startsWith("Y") == false) {
       playing = false;
     }
 
@@ -147,6 +150,7 @@ class GussingGame {
   public static void results() {
 
     double guessesPerGame = guessCount / roundsPlayed;
+    
 
     System.out.println("\n" + "Overall results:");
     System.out.printf("Total games = %d \n", roundsPlayed);
