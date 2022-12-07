@@ -10,8 +10,9 @@ Guessing Game
 Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
-need to reset guess count each time a new round is played
 need to finish calculating/printing results
+guessCountBest in line 35 needs different solution, not just making huge number
+guessesPerGame isnt calculated/rounded correctly
 also should probably look into why the tests are being weird
 */
 
@@ -32,7 +33,7 @@ class GussingGame {
   static int roundsPlayed = 0;
   // variables for best round
   static int guessCountRound = 0;
-  static int guessCountBest = 0;
+  static int guessCountBest = 999999999;
 
   // static strings
   // 
@@ -100,7 +101,7 @@ class GussingGame {
       
     }
 
-    final String GUESS_AMOUNT = "You got it right in " + guessCount + " guesses!";
+    final String GUESS_AMOUNT = "You got it right in " + guessCountRound + " guesses!";
 
     System.out.println(GUESS_AMOUNT);
 
