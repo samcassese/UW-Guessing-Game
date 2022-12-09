@@ -10,7 +10,7 @@ Guessing Game
 Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
-when playing new round the same number is being guessed
+look into using method and return boolean instead of hard coding for when player is still playing
 also should probably look into why the tests are being weird
 */
 
@@ -33,6 +33,8 @@ class GussingGame {
   // variables for best round
   static int guessCountRound = 0;
   static int guessCountBest = Integer.MAX_VALUE;
+  // maximum value for random integers
+  static int MAX = 100;
 
   // static strings
   // 
@@ -70,8 +72,10 @@ class GussingGame {
 
     intro();
 
+    int randNum = random.nextInt(MAX) + 1;
+
     // a goal answer
-    int goal = getGoal(10, 1); 
+    int goal = getGoal(randNum, 1); 
     
 
     int userAnswer = 0; // initializing variable

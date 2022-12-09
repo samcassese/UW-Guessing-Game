@@ -60,11 +60,28 @@ public class GG {
   // METHODS
   //////////////////////
 
-  public void playGame() {
+  /*
+  public void playRound() {
+    intro();
+    this.guess = playerGuess();
     this.totalGames++;
-    this.totalGuesses+= 6;
-    this.bestGame = 6;
+
+    while(needHint()) {
+      this.guess = playerGuess();
+    }
+    return score;
   }
+  */
+
+  /*
+  private boolean needHint() {
+    if (goal < guess) System.out.println(LOW);
+    else if (goal > guess) System.out.println(HIGH);
+    else System.out.printf(CORRECT, this.score);
+
+    return goal != guess;
+  }
+  */
 
   public void showResults() {
 
@@ -77,6 +94,18 @@ public class GG {
     System.out.printf("Best game = %d", this.bestGame);
     
   }
+
+  /*
+  public void playGame() {
+    bestGame = playRound();
+    while(playerPlays()) {
+      score = playGame();
+      if(bestGame > score) bestGame = score;
+      this.avg = (double) totalGuess / totalGames;
+    }
+    printSummary();
+  }
+  */
   
   public String getPlayer() {
     return player;
