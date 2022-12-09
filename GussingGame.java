@@ -10,6 +10,7 @@ Guessing Game
 Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
+when playing new round the same number is being guessed
 also should probably look into why the tests are being weird
 */
 
@@ -173,8 +174,14 @@ class GussingGame {
   // int random = random number we are guessing
   // int i = index of array of test passing solutions i guess idk whats happening
   private static int getGoal(int random, int i){
+    
+    // goal is random number 1-100
     int goal = random;
+
+    // if i < length of goals list, picks from list of goals
     if(i < goals.length) goal = Integer.parseInt(goals[i]);
+
+    
     return goal;
   }
 }

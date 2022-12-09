@@ -10,8 +10,9 @@ import java.io.FileNotFoundException;
 class Main {
   
   public static void main(String[] args) throws FileNotFoundException {
-    
-    String a[] = {"31","64","49"};
+
+    // need to make this list < 1 string to actually pick random num
+    String a[] = {"31","64","49"}; // 
     GussingGame.main(a);
 
     /*
