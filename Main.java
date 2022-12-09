@@ -12,7 +12,7 @@ class Main {
   public static void main(String[] args) throws FileNotFoundException {
 
     // need to make this list < 1 string to actually pick random num
-    String a[] = {"31"}; // {"31","64","49"}
+    String a[] = {"31","64","49"}; // {"31","64","49"}
 
     // procedural
     GussingGame.main(a);

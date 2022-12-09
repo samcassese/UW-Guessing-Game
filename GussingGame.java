@@ -10,7 +10,7 @@ Guessing Game
 Notes:
 do result constants in GG.java file
 combine askUserPlayAgain and askUser later on
-look into using method and return boolean instead of hard coding for when player is still playing ( in line 146: playGame() )
+need to make the program use the correct values from list instead of just using 64 every time
 also should probably look into why the tests are being weird
 */
 
