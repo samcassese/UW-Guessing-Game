@@ -13,6 +13,19 @@ class Main {
 
     // ReadWrite.main(args);
 
+    Player mike = new Player("Mike");
+
+    System.out.println(mike.getName());
+    mike.setGames(2);
+    System.out.println(mike.getGames());
+
+    // guesses and best switched NOTE
+    Data d = new Data();
+    Player gus = d.getPlayer("Gus");
+    System.out.println(gus.getBest());
+
+
+    /*
     Player sam = new Player("Sam");
     
     System.out.println(sam.getGames());
@@ -21,6 +34,7 @@ class Main {
     sam.setGames(newGames);
     
     System.out.println(sam.getGames());
+    */
 
     // need to make this list < 1 string to actually pick random num
     //String a[] = {"31","64","49"}; // {"31","64","49"}

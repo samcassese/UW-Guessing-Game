@@ -28,6 +28,7 @@ public class Player {
       Scanner s = new Scanner(record);
       this.name = s.next();
       this.games = s.nextInt();
+      this.guesses = s.nextInt();
       this.best = s.nextInt();
       s.close();
     }
