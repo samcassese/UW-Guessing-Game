@@ -11,11 +11,22 @@ class Main {
   
   public static void main(String[] args) throws FileNotFoundException {
 
+    // ReadWrite.main(args);
+
+    Player sam = new Player("Sam");
+    
+    System.out.println(sam.getGames());
+    
+    int newGames = sam.getGames() + 1;
+    sam.setGames(newGames);
+    
+    System.out.println(sam.getGames());
+
     // need to make this list < 1 string to actually pick random num
-    String a[] = {"31","64","49"}; // {"31","64","49"}
+    //String a[] = {"31","64","49"}; // {"31","64","49"}
 
     // procedural
-    GussingGame.main(a);
+    //GussingGame.main(a);
 
     
     // object-oriented
