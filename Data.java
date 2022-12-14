@@ -58,5 +58,28 @@ public class Data {
     return this.p;
     
   }
+
+  public Player getPlayer(String player) {
+    this.player = player;
+    loadFile();
+    return readPlayer();
+  }
+
+  public void updateRecord() {
+    if(this.player == null) return;
+    String record = 
+      player + "\t" + p.getGames() + "\t" + p.getGuesses() + "\t" + p.getBest();
+
+    this.records += record;
+    
+    try{
+      ps = new PrintStream(new File(FILE));
+      ps.println(records);
+    }
+    catch(FileNotFoundException e) {
+      System.out.println("Eror");
+    }
+    
+  }
   
 }
